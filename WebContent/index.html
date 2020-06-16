@@ -11,7 +11,7 @@
 </head>
 <body>
 	<!-- Mini curso front end -->
-	<form action="">
+	<form action="salvarUsuario" method="post" onsubmit="return validarDados()? true : false">
 		<table style="background-color: #CFCFCF;">
 			<!-- Linha da tabela -->
 			<tr>
@@ -33,5 +33,24 @@
 			</tr>
 		</table>
 	</form>
+	<script type="text/javascript">
+		function validarDados(){
+			var nome = document.getElementById("nome").value;
+			var login = document.getElementById("login").value;
+			var senha = document.getElementById("senha").value;
+			
+			if(nome ==''){
+				alert('Informe o nome!');
+				return false;
+			}else if(login ==''){
+				alert('Informe o login!');
+				return false;
+			}else if(senha ==''){
+				alert('Informe a senha!');
+				return false;
+			}
+			return true;
+		}
+	</script>
 </body>
 </html>
